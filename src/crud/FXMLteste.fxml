@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crud.FXMLtesteController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="-2.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabEmpregado" text="Empregado">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="taabViewEmpregado" layoutX="14.0" layoutY="24.0" prefHeight="281.0" prefWidth="567.0">
+                          <columns>
+                            <TableColumn fx:id="colNomeEmpregado" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="colNomeMeioEmpregado" prefWidth="75.0" text="Nome do Meio" />
+                              <TableColumn fx:id="colSobrenomeEmpregado" prefWidth="75.0" text="Sobrenome" />
+                              <TableColumn fx:id="colCodigoEmpregado" prefWidth="75.0" text="Código" />
+                              <TableColumn fx:id="colDtNascimentoEmpregado" prefWidth="75.0" text="Dt Nasc." />
+                              <TableColumn fx:id="colEnderecoEmpregado" prefWidth="75.0" text="Endereço" />
+                              <TableColumn fx:id="colSexoEmpregado" prefWidth="75.0" text="Sexo" />
+                              <TableColumn fx:id="colSalarioEmpregado" prefWidth="75.0" text="Salario" />
+                              <TableColumn fx:id="colGerenteEmpregado" prefWidth="75.0" text="Gerente" />
+                              <TableColumn fx:id="colDepartamentoEmpregado" prefWidth="75.0" text="Departamento" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnCriarEmpregado" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#criarEmpregado" text="Criar" />
+                        <Button fx:id="btnEditarEmpregado" layoutX="477.0" layoutY="325.0" mnemonicParsing="false" onAction="#editarEmpregado" text="Editar" />
+                        <Button fx:id="btnApagarEmpregado" layoutX="414.0" layoutY="325.0" mnemonicParsing="false" onAction="#deletarEmpregado" text="Apagar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabDepartamento" text="Departamento">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabViewDepartamento" layoutX="14.0" layoutY="24.0" prefHeight="281.0" prefWidth="567.0">
+                           <columns>
+                              <TableColumn fx:id="colNomeDepartamento" prefWidth="75.0" text="Nome" />
+                              <TableColumn fx:id="colCodigoDepartamento" prefWidth="75.0" text="Código" />
+                              <TableColumn fx:id="colGerenteDepartamento" prefWidth="75.0" text="Gerente" />
+                              <TableColumn fx:id="colDataGerenciaDepartamento" prefWidth="102.0" text="Data da Gerência" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnCriarDepartamento" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#criarDepartamento" text="Criar" />
+                        <Button fx:id="btnEditar1" layoutX="477.0" layoutY="325.0" mnemonicParsing="false" onAction="#editarDepartamento" text="Editar" />
+                        <Button fx:id="btnApagar1" layoutX="414.0" layoutY="325.0" mnemonicParsing="false" onAction="#deletarDepartamento" text="Apagar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabProjeto" text="Projeto">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabViewProjeto" layoutX="14.0" layoutY="24.0" prefHeight="281.0" prefWidth="567.0">
+                           <columns>
+                              <TableColumn fx:id="colDescricaoProjeto" prefWidth="75.0" text="Descrição" />
+                              <TableColumn fx:id="colCodigoProjeto" prefWidth="75.0" text="Código" />
+                              <TableColumn fx:id="colLocalProjeto" prefWidth="75.0" text="Local" />
+                              <TableColumn fx:id="colDepartamentoProjeto" prefWidth="102.0" text="Departamento" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnCriarProjeto" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#criarProjeto" text="Criar" />
+                        <Button fx:id="btnEditarProjeto" layoutX="477.0" layoutY="325.0" mnemonicParsing="false" onAction="#editarProjeto" text="Editar" />
+                        <Button fx:id="btnApagarProjeto" layoutX="414.0" layoutY="325.0" mnemonicParsing="false" onAction="#deletarProjeto" text="Apagar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabRelatorio" text="Relatórios">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnRelatorio" layoutX="484.0" layoutY="324.0" mnemonicParsing="false" onAction="#gerarRelatorio" text="Gerar Relatórios" />
+                        <RadioButton fx:id="radio1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Questão 1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radio2" layoutX="113.0" layoutY="14.0" mnemonicParsing="false" text="Questão 2" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radio3" layoutX="208.0" layoutY="14.0" mnemonicParsing="false" text="Questão 3" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radio4" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" text="Questão 4" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radio5" layoutX="397.0" layoutY="14.0" mnemonicParsing="false" text="Questão 5" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radio6" layoutX="499.0" layoutY="14.0" mnemonicParsing="false" text="Questão 6" toggleGroup="$toggleGroup" />
+                        <TableView fx:id="tbViewRelatorio" layoutX="13.0" layoutY="75.0" prefHeight="241.0" prefWidth="574.0">
+                          <columns>
+                            <TableColumn fx:id="colRelatorio1" prefWidth="75.0" text="C1" />
+                            <TableColumn fx:id="colRelatorio2" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="colRelatorio3" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="colRelatorio4" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="colRelatorio5" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="colRelatorio6" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="colRelatorio7" prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <RadioButton fx:id="radio7" layoutX="13.0" layoutY="45.0" mnemonicParsing="false" text="Questão 7" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radio8" layoutX="113.0" layoutY="45.0" mnemonicParsing="false" text="Questão 8" toggleGroup="$toggleGroup" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane fx:id="paneNovoEmpregado" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField fx:id="txtNomeEmpregado" layoutX="14.0" layoutY="47.0" />
+            <TextField fx:id="txtNomeMeioEmpregado" layoutX="177.0" layoutY="47.0" prefHeight="25.0" prefWidth="28.0" />
+            <TextField fx:id="txtSobrenomeEmpregado" layoutX="276.0" layoutY="47.0" />
+            <TextField fx:id="txtCodigoEmpregado" layoutX="14.0" layoutY="89.0" />
+            <TextField fx:id="txtDtNascimentoEmpregado" layoutX="14.0" layoutY="133.0" />
+            <TextField fx:id="txtEnderecoEmpregado" layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="567.0" />
+            <TextField fx:id="txtSexoEmpregado" layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="28.0" />
+            <TextField fx:id="txtSalarioEmpregado" layoutX="14.0" layoutY="265.0" prefHeight="25.0" prefWidth="106.0" />
+            <TextField fx:id="txtGerenteEmpregado" layoutX="14.0" layoutY="311.0" prefHeight="25.0" prefWidth="106.0" />
+            <TextField fx:id="txtDepartamentoEmpregado" layoutX="14.0" layoutY="354.0" prefHeight="25.0" prefWidth="106.0" />
+            <Button fx:id="btnOkNovoEmpregado" layoutX="521.0" layoutY="354.0" mnemonicParsing="false" onAction="#actionOkNovoEmpregado" text="OK" />
+            <Button fx:id="btnCancelarNovoEmpregado" layoutX="443.0" layoutY="354.0" mnemonicParsing="false" onAction="#actionCancelNovoEmpregadado" text="Cancelar" />
+            <Label layoutX="14.0" layoutY="30.0" text="Nome" />
+            <Label layoutX="177.0" layoutY="30.0" text="Nome do Meio" />
+            <Label layoutX="276.0" layoutY="30.0" text="Sobrenome" />
+            <Label layoutX="15.0" layoutY="71.0" text="Código" />
+            <Label layoutX="14.0" layoutY="114.0" text="Data de Nascimento:" />
+            <Label layoutX="15.0" layoutY="158.0" text="Endereço" />
+            <Label layoutX="15.0" layoutY="200.0" text="Sexo" />
+            <Label layoutX="14.0" layoutY="247.0" text="Salário" />
+            <Label layoutX="14.0" layoutY="291.0" text="Gerente" />
+            <Label layoutX="15.0" layoutY="334.0" text="Departamento" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneNovoDepartamento" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField fx:id="txtNomeDepartamento" layoutX="14.0" layoutY="47.0" />
+            <TextField fx:id="txtCodigoDepartamento" layoutX="14.0" layoutY="89.0" />
+            <TextField fx:id="txtDtGerenciaDepartamento" layoutX="14.0" layoutY="133.0" />
+            <TextField fx:id="txtGerenteDepartamento" layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="btnOkNovoDepartamento" layoutX="521.0" layoutY="354.0" mnemonicParsing="false" onAction="#actionOkNovoDepartamento" text="OK" />
+            <Button fx:id="btnCancelarNovoDepartamento" layoutX="443.0" layoutY="354.0" mnemonicParsing="false" onAction="#actionCancelNovoDepartamento" text="Cancelar" />
+            <Label layoutX="14.0" layoutY="30.0" text="Nome" />
+            <Label layoutX="15.0" layoutY="71.0" text="Código" />
+            <Label layoutX="14.0" layoutY="114.0" text="Data da Gerência" />
+            <Label layoutX="15.0" layoutY="158.0" text="Gerente" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneNovoProjeto" layoutX="3.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField fx:id="txtDescricaoProjeto" layoutX="14.0" layoutY="47.0" />
+            <TextField fx:id="txtCodigoProjeto" layoutX="14.0" layoutY="89.0" />
+            <TextField fx:id="txtLocalProjeto" layoutX="14.0" layoutY="133.0" />
+            <TextField fx:id="txtDepartamentoProjeto" layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="btnOkNovoProjeto" layoutX="521.0" layoutY="354.0" mnemonicParsing="false" text="OK" />
+            <Button fx:id="btnCancelarNovoProjeto" layoutX="443.0" layoutY="354.0" mnemonicParsing="false" text="Cancelar" />
+            <Label layoutX="14.0" layoutY="30.0" text="Descricao" />
+            <Label layoutX="15.0" layoutY="71.0" text="Código" />
+            <Label layoutX="14.0" layoutY="114.0" text="Local" />
+            <Label layoutX="15.0" layoutY="158.0" text="Departamento" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

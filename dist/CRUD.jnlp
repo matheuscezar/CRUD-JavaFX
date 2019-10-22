@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CRUD.jnlp">
+  <information>
+    <title>CRUD</title>
+    <vendor>Mario</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CRUD.jar" size="26628" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.2.jar" size="233859" download="eager" />
+    <jar href="lib\commons-collections-3.0.jar" size="518641" download="eager" />
+    <jar href="lib\commons-collections4-4.4.jar" size="751914" download="eager" />
+    <jar href="lib\commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\jasperreports-5.6.1.jar" size="4939775" download="eager" />
+    <jar href="lib\postgresql-42.2.8.jar" size="900064" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="crud.CRUD"  name="CRUD" />
+  <update check="always"/>
+</jnlp>
